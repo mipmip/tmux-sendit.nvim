@@ -96,6 +96,11 @@ No keybindings are set by default. Bind the functions you need in your config:
 | `:Sendit path`       | n / v  | send the project-relative file path (with line range in visual mode) |
 | `:Sendit fullpath`   | n / v  | send the absolute file path (with line range in visual mode)         |
 | `:Sendit diagnostic` | normal | send diagnostics to tmux pane       |
+| `:Sendit reset`      | normal | clear the remembered target pane    |
+
+## Pane Selection
+
+The pane picker automatically filters out the pane running neovim. When only one target pane is available, it sends directly without prompting. After selecting a pane, it's remembered for subsequent sends — use `:Sendit reset` to clear it.
 
 ## License
 
